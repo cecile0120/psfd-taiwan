@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSFD Taiwan - Panel Study of Family Dynamics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        taiwan: {
+                            red: '#FE0000',
+                            blue: '#000095',
+                            white: '#FFFFFF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .btn-primary {
+            @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+        }
+        .btn-secondary {
+            @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+        }
+        .card {
+            @apply bg-white rounded-lg shadow-md border border-gray-200 p-6;
+        }
+        .input-field {
+            @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-gradient-to-r from-taiwan-red to-taiwan-blue rounded-lg flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-sm">PSFD</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">Panel Study of Family Dynamics</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium">About PSFD</a>
+                    <a href="#variables" class="text-gray-600 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium">Variables</a>
+                    <a href="#samples" class="text-gray-600 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium">Samples</a>
+                    <a href="https://psfd.sinica.edu.tw/V2/?page_id=966&lang=en" target="_blank" class="text-gray-600 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium">Official Site</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Panel Study of Family Dynamics (PSFD)</h1>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                The longest and largest panel study in Taiwan, collecting comprehensive data on families, population, labor, education, health, and psychological studies since 1999.
+            </p>
+            <div class="mt-6 flex justify-center space-x-8 text-sm text-gray-500">
+                <div>
+                    <span class="font-semibold">Started:</span> <span id="startYear">1999</span>
+                </div>
+                <div>
+                    <span class="font-semibold">Waves:</span> <span id="totalWaves">22</span>
+                </div>
+                <div>
+                    <span class="font-semibold">Respondents:</span> <span id="totalRespondents">6,000+</span>
+                </div>
+                <div>
+                    <span class="font-semibold">Coverage:</span> <span id="coverage">Taiwan & Southeast China</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- About PSFD Section -->
+        <section id="about" class="mb-12">
+            <div class="card">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">About PSFD</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Background</h3>
+                        <p class="text-gray-600 mb-4">
+                            Under the auspices of Academician Cyrus C. Y. Chu at Academia Sinica, the PSFD project was initiated in 1998. The main purpose is to collect panel survey data on families and investigate patterns and changes of families in Chinese societies.
+                        </p>
+                        <p class="text-gray-600">
+                            The project is currently funded by Academia Sinica and managed by the Center for Survey Research (CSR) at the Research Center for Humanities and Social Science (RCHSS).
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Research Scope</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Families and population studies</li>
+                            <li>• Labor market dynamics</li>
+                            <li>• Educational attainment</li>
+                            <li>• Health and psychological studies</li>
+                            <li>• Multi-generational analysis</li>
+                            <li>• Cross-regional comparisons (Taiwan vs. China)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Variable Selection -->
+        <section id="variables" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Variable Selection</h2>
+            
+            <!-- Search and Filter -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <input type="text" id="variableSearch" placeholder="Search variables..." class="input-field">
+                    <select id="categoryFilter" class="input-field">
+                        <option value="">All Categories</option>
+                        <!-- Categories will be populated by JavaScript -->
+                    </select>
+                    <select id="waveFilter" class="input-field">
+                        <option value="">All Waves</option>
+                        <!-- Waves will be populated by JavaScript -->
+                    </select>
+                    <button onclick="clearFilters()" class="btn-secondary">Clear Filters</button>
+                </div>
+            </div>
+
+            <!-- Variables Table -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    <input type="checkbox" id="selectAll" onchange="toggleSelectAll()" class="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500">
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Variable Name</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Coding</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">More Info</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Availability</th>
+                            </tr>
+                        </thead>
+                        <tbody id="variablesTableBody" class="bg-white divide-y divide-gray-200">
+                            <!-- Variables will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample Data -->
+        <section id="samples" class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Sample Data</h2>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                <div class="mb-4 flex items-center space-x-4">
+                    <label class="block text-sm font-medium text-gray-700">Number of Records:</label>
+                    <select id="sampleSize" class="input-field w-48">
+                        <option value="10">10 records</option>
+                        <option value="50">50 records</option>
+                        <option value="100">100 records</option>
+                        <option value="500">500 records</option>
+                    </select>
+                    <span class="text-sm text-gray-600">
+                        Selected Variables: <span id="variableCount" class="font-semibold">0</span>
+                    </span>
+                </div>
+                <div id="sampleData" class="overflow-x-auto">
+                    <p class="text-gray-500">Select variables to view sample data</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Download Data</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                    <select id="downloadFormat" class="input-field">
+                        <option value="csv">CSV Format</option>
+                        <option value="spss">SPSS Format</option>
+                        <option value="stata">Stata Format</option>
+                        <option value="r">R Format</option>
+                    </select>
+                    <button onclick="downloadData()" class="btn-primary">Download Selected Data</button>
+                    <button onclick="downloadCodebook()" class="btn-secondary">Download Codebook</button>
+                    <button onclick="downloadMetadata()" class="btn-secondary">Download Metadata</button>
+                </div>
+                <div class="text-sm text-gray-600">
+                    <p><strong>Data Source:</strong> <a href="https://psfd.sinica.edu.tw/V2/?page_id=966&lang=en" target="_blank" class="text-primary-600 hover:underline">Panel Study of Family Dynamics (PSFD)</a></p>
+                    <p><strong>Institution:</strong> <span id="institution">Academia Sinica, Center for Survey Research</span></p>
+                    <p><strong>Citation:</strong> Please cite PSFD data according to the official guidelines</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Global variables
+        let psfdData = null;
+        let selectedVariables = new Set();
+        let filteredVariables = [];
+
+        // Load PSFD data from external JSON file
+        async function loadPSFDData() {
+            try {
+                const response = await fetch('data/psfd_variables.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                psfdData = await response.json();
+                
+                // Update page with metadata
+                updatePageMetadata();
+                
+                // Initialize the page
+                initializePage();
+            } catch (error) {
+                console.error('Error loading PSFD data:', error);
+                document.getElementById('variablesTableBody').innerHTML = 
+                    '<tr><td colspan="6" class="px-6 py-4 text-center text-red-600">Error loading variable data. Please check the data file.</td></tr>';
+            }
+        }
+
+        function updatePageMetadata() {
+            if (!psfdData) return;
+            
+            document.getElementById('startYear').textContent = psfdData.metadata.start_year;
+            document.getElementById('totalWaves').textContent = psfdData.metadata.total_waves;
+            document.getElementById('totalRespondents').textContent = psfdData.metadata.total_respondents.toLocaleString() + '+';
+            document.getElementById('coverage').textContent = psfdData.metadata.coverage.join(' & ');
+            document.getElementById('institution').textContent = psfdData.metadata.institution;
+        }
+
+        function initializePage() {
+            if (!psfdData) return;
+            
+            // Initialize variables
+            filteredVariables = [...psfdData.variables];
+            
+            // Populate category filter
+            populateCategoryFilter();
+            
+            // Populate wave filter
+            populateWaveFilter();
+            
+            // Display variables
+            displayVariables();
+            
+            // Update sample data
+            updateSampleData();
+            
+            // Add event listeners
+            addEventListeners();
+        }
+
+        function populateCategoryFilter() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            categoryFilter.innerHTML = '<option value="">All Categories</option>';
+            
+            psfdData.categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category.id;
+                option.textContent = category.name;
+                categoryFilter.appendChild(option);
+            });
+        }
+
+        function populateWaveFilter() {
+            const waveFilter = document.getElementById('waveFilter');
+            waveFilter.innerHTML = '<option value="">All Waves</option>';
+            
+            psfdData.waves.forEach(wave => {
+                const option = document.createElement('option');
+                option.value = wave.year;
+                option.textContent = `${wave.year} (Wave ${wave.wave})`;
+                waveFilter.appendChild(option);
+            });
+        }
+
+        function displayVariables() {
+            const tbody = document.getElementById('variablesTableBody');
+            
+            tbody.innerHTML = filteredVariables.map(variable => `
+                <tr class="hover:bg-gray-50">
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <input type="checkbox" 
+                               id="var_${variable.name}" 
+                               value="${variable.name}"
+                               onchange="toggleVariable('${variable.name}')"
+                               class="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500">
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        ${variable.name}
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-900">
+                        ${variable.description}
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-600">
+                        ${variable.coding}
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-600">
+                        ${variable.moreInfo}
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-600">
+                        ${variable.availability}
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function toggleVariable(variableName) {
+            if (selectedVariables.has(variableName)) {
+                selectedVariables.delete(variableName);
+            } else {
+                selectedVariables.add(variableName);
+            }
+            updateSampleData();
+            updateVariableCount();
+        }
+
+        function toggleSelectAll() {
+            const selectAllCheckbox = document.getElementById('selectAll');
+            const checkboxes = document.querySelectorAll('#variablesTableBody input[type="checkbox"]');
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = selectAllCheckbox.checked;
+                toggleVariable(checkbox.value);
+            });
+        }
+
+        function updateVariableCount() {
+            document.getElementById('variableCount').textContent = selectedVariables.size;
+        }
+
+        function updateSampleData() {
+            const sampleSize = parseInt(document.getElementById('sampleSize').value);
+            const sampleData = document.getElementById('sampleData');
+            
+            if (selectedVariables.size === 0) {
+                sampleData.innerHTML = '<p class="text-gray-500">Select variables to view sample data</p>';
+                return;
+            }
+
+            // Generate sample data
+            const headers = Array.from(selectedVariables);
+            const data = [];
+            
+            for (let i = 0; i < sampleSize; i++) {
+                const row = {};
+                headers.forEach(header => {
+                    const variable = psfdData.variables.find(v => v.name === header);
+                    if (variable) {
+                        if (variable.dataType === 'numeric') {
+                            const [min, max] = variable.range;
+                            row[header] = Math.floor(Math.random() * (max - min + 1)) + min;
+                        } else if (variable.dataType === 'categorical') {
+                            const randomCategory = variable.categories[Math.floor(Math.random() * variable.categories.length)];
+                            row[header] = randomCategory.value;
+                        } else {
+                            row[header] = 'Sample';
+                        }
+                    }
+                });
+                data.push(row);
+            }
+
+            const tableHTML = `
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            ${headers.map(header => `<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">${header}</th>`).join('')}
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        ${data.map(row => `
+                            <tr>
+                                ${headers.map(header => `<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${row[header]}</td>`).join('')}
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+            
+            sampleData.innerHTML = tableHTML;
+        }
+
+        function clearFilters() {
+            document.getElementById('variableSearch').value = '';
+            document.getElementById('categoryFilter').value = '';
+            document.getElementById('waveFilter').value = '';
+            filteredVariables = [...psfdData.variables];
+            displayVariables();
+        }
+
+        function downloadData() {
+            if (selectedVariables.size === 0) {
+                alert('Please select at least one variable');
+                return;
+            }
+            
+            const format = document.getElementById('downloadFormat').value;
+            alert(`Downloading ${selectedVariables.size} PSFD variables in ${format.toUpperCase()} format...\n\nPlease visit the official PSFD website for actual data access.`);
+        }
+
+        function downloadCodebook() {
+            alert('Downloading PSFD variable codebook...\n\nPlease visit the official PSFD website for complete documentation.');
+        }
+
+        function downloadMetadata() {
+            alert('Downloading PSFD metadata...\n\nPlease visit the official PSFD website for complete metadata.');
+        }
+
+        function addEventListeners() {
+            // Search functionality
+            document.getElementById('variableSearch').addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                filteredVariables = psfdData.variables.filter(variable => 
+                    variable.name.toLowerCase().includes(searchTerm) ||
+                    variable.description.toLowerCase().includes(searchTerm)
+                );
+                displayVariables();
+            });
+            
+            // Category filtering
+            document.getElementById('categoryFilter').addEventListener('change', function() {
+                const category = this.value;
+                if (category) {
+                    filteredVariables = psfdData.variables.filter(variable => variable.category === category);
+                } else {
+                    filteredVariables = [...psfdData.variables];
+                }
+                displayVariables();
+            });
+            
+            // Wave filtering
+            document.getElementById('waveFilter').addEventListener('change', function() {
+                const wave = this.value;
+                if (wave) {
+                    filteredVariables = psfdData.variables.filter(variable => variable.waves.includes(wave));
+                } else {
+                    filteredVariables = [...psfdData.variables];
+                }
+                displayVariables();
+            });
+            
+            // Sample size change
+            document.getElementById('sampleSize').addEventListener('change', function() {
+                updateSampleData();
+            });
+        }
+
+        // Initialize the page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPSFDData();
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "dataset": "Panel Study of Family Dynamics (PSFD)",
+    "institution": "Academia Sinica, Center for Survey Research",
+    "website": "https://psfd.sinica.edu.tw/V2/?page_id=966&lang=en",
+    "start_year": 1999,
+    "end_year": 2020,
+    "total_waves": 22,
+    "total_respondents": 6000,
+    "coverage": ["Taiwan", "Southeast China (Shanghai, Zhejiang, Fujian)"],
+    "description": "The longest and largest panel study in Taiwan, collecting comprehensive data on families, population, labor, education, health, and psychological studies."
+  },
+  "categories": [
+    {
+      "id": "demographic",
+      "name": "Demographic",
+      "description": "Basic demographic characteristics"
+    },
+    {
+      "id": "family",
+      "name": "Family",
+      "description": "Family structure and relationships"
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "description": "Educational attainment and experiences"
+    },
+    {
+      "id": "employment",
+      "name": "Employment",
+      "description": "Employment status and work characteristics"
+    },
+    {
+      "id": "income",
+      "name": "Income & Wealth",
+      "description": "Income, wealth, and economic well-being"
+    },
+    {
+      "id": "health",
+      "name": "Health",
+      "description": "Health status and healthcare utilization"
+    },
+    {
+      "id": "psychological",
+      "name": "Psychological",
+      "description": "Psychological well-being and attitudes"
+    }
+  ],
+  "variables": [
+    {
+      "name": "A01",
+      "description": "Respondent's age",
+      "category": "demographic",
+      "coding": "Numeric (years)",
+      "moreInfo": "Age in years at the time of survey",
+      "availability": "All waves (1999-2020)",
+      "waves": ["1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "numeric",
+      "range": [0, 120],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A02",
+      "description": "Respondent's gender",
+      "category": "demographic",
+      "coding": "1=Male, 2=Female",
+      "moreInfo": "Biological sex of the respondent",
+      "availability": "All waves (1999-2020)",
+      "waves": ["1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "categorical",
+      "categories": [
+        {"value": 1, "label": "Male"},
+        {"value": 2, "label": "Female"}
+      ],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A03",
+      "description": "Educational attainment",
+      "category": "education",
+      "coding": "1=None, 2=Elementary, 3=Junior High, 4=Senior High, 5=College, 6=Graduate",
+      "moreInfo": "Highest level of education completed",
+      "availability": "All waves (1999-2020)",
+      "waves": ["1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "categorical",
+      "categories": [
+        {"value": 1, "label": "None"},
+        {"value": 2, "label": "Elementary"},
+        {"value": 3, "label": "Junior High"},
+        {"value": 4, "label": "Senior High"},
+        {"value": 5, "label": "College"},
+        {"value": 6, "label": "Graduate"}
+      ],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A04",
+      "description": "Marital status",
+      "category": "demographic",
+      "coding": "1=Never married, 2=Married, 3=Divorced, 4=Widowed",
+      "moreInfo": "Current marital status of the respondent",
+      "availability": "All waves (1999-2020)",
+      "waves": ["1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "categorical",
+      "categories": [
+        {"value": 1, "label": "Never married"},
+        {"value": 2, "label": "Married"},
+        {"value": 3, "label": "Divorced"},
+        {"value": 4, "label": "Widowed"}
+      ],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A05",
+      "description": "Employment status",
+      "category": "employment",
+      "coding": "1=Employed, 2=Unemployed, 3=Not in labor force",
+      "moreInfo": "Current employment status",
+      "availability": "All waves (1999-2020)",
+      "waves": ["1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "categorical",
+      "categories": [
+        {"value": 1, "label": "Employed"},
+        {"value": 2, "label": "Unemployed"},
+        {"value": 3, "label": "Not in labor force"}
+      ],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A06",
+      "description": "Monthly income",
+      "category": "income",
+      "coding": "Numeric (NTD)",
+      "moreInfo": "Monthly personal income in New Taiwan Dollars",
+      "availability": "Waves 2-22 (2000-2020)",
+      "waves": ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "numeric",
+      "range": [0, 1000000],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A07",
+      "description": "Household size",
+      "category": "family",
+      "coding": "Numeric (count)",
+      "moreInfo": "Number of people living in the household",
+      "availability": "All waves (1999-2020)",
+      "waves": ["1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "numeric",
+      "range": [1, 20],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A08",
+      "description": "Self-rated health",
+      "category": "health",
+      "coding": "1=Excellent, 2=Very good, 3=Good, 4=Fair, 5=Poor",
+      "moreInfo": "Respondent's subjective health assessment",
+      "availability": "Waves 5-22 (2003-2020)",
+      "waves": ["2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "categorical",
+      "categories": [
+        {"value": 1, "label": "Excellent"},
+        {"value": 2, "label": "Very good"},
+        {"value": 3, "label": "Good"},
+        {"value": 4, "label": "Fair"},
+        {"value": 5, "label": "Poor"}
+      ],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A09",
+      "description": "Life satisfaction",
+      "category": "psychological",
+      "coding": "1-10 scale (1=Very dissatisfied, 10=Very satisfied)",
+      "moreInfo": "Overall life satisfaction rating",
+      "availability": "Waves 8-22 (2006-2020)",
+      "waves": ["2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "numeric",
+      "range": [1, 10],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A10",
+      "description": "Number of children",
+      "category": "family",
+      "coding": "Numeric (count)",
+      "moreInfo": "Total number of children ever born",
+      "availability": "All waves (1999-2020)",
+      "waves": ["1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "numeric",
+      "range": [0, 15],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A11",
+      "description": "Occupation",
+      "category": "employment",
+      "coding": "ISCO-88 classification",
+      "moreInfo": "Current or most recent occupation",
+      "availability": "Waves 3-22 (2001-2020)",
+      "waves": ["2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "categorical",
+      "categories": [
+        {"value": 1, "label": "Legislators, senior officials and managers"},
+        {"value": 2, "label": "Professionals"},
+        {"value": 3, "label": "Technicians and associate professionals"},
+        {"value": 4, "label": "Clerks"},
+        {"value": 5, "label": "Service workers and shop and market sales workers"},
+        {"value": 6, "label": "Skilled agricultural and fishery workers"},
+        {"value": 7, "label": "Craft and related workers"},
+        {"value": 8, "label": "Plant and machine operators and assemblers"},
+        {"value": 9, "label": "Elementary occupations"}
+      ],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A12",
+      "description": "Industry",
+      "category": "employment",
+      "coding": "ISIC classification",
+      "moreInfo": "Industry of current or most recent job",
+      "availability": "Waves 3-22 (2001-2020)",
+      "waves": ["2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "categorical",
+      "categories": [
+        {"value": 1, "label": "Agriculture, hunting and forestry"},
+        {"value": 2, "label": "Fishing"},
+        {"value": 3, "label": "Mining and quarrying"},
+        {"value": 4, "label": "Manufacturing"},
+        {"value": 5, "label": "Electricity, gas and water supply"},
+        {"value": 6, "label": "Construction"},
+        {"value": 7, "label": "Wholesale and retail trade"},
+        {"value": 8, "label": "Hotels and restaurants"},
+        {"value": 9, "label": "Transport, storage and communication"},
+        {"value": 10, "label": "Financial intermediation"},
+        {"value": 11, "label": "Real estate, renting and business activities"},
+        {"value": 12, "label": "Public administration and defence"},
+        {"value": 13, "label": "Education"},
+        {"value": 14, "label": "Health and social work"},
+        {"value": 15, "label": "Other community, social and personal service activities"},
+        {"value": 16, "label": "Private households with employed persons"},
+        {"value": 17, "label": "Extra-territorial organizations and bodies"}
+      ],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A13",
+      "description": "Work hours per week",
+      "category": "employment",
+      "coding": "Numeric (hours)",
+      "moreInfo": "Average weekly work hours",
+      "availability": "Waves 4-22 (2002-2020)",
+      "waves": ["2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "numeric",
+      "range": [0, 168],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A14",
+      "description": "Household income",
+      "category": "income",
+      "coding": "Numeric (NTD)",
+      "moreInfo": "Total annual household income",
+      "availability": "Waves 2-22 (2000-2020)",
+      "waves": ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "numeric",
+      "range": [0, 5000000],
+      "missingValues": [-9, -8, -7]
+    },
+    {
+      "name": "A15",
+      "description": "Housing ownership",
+      "category": "family",
+      "coding": "1=Own, 2=Rent, 3=Other",
+      "moreInfo": "Housing tenure status",
+      "availability": "Waves 6-22 (2004-2020)",
+      "waves": ["2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+      "dataType": "categorical",
+      "categories": [
+        {"value": 1, "label": "Own"},
+        {"value": 2, "label": "Rent"},
+        {"value": 3, "label": "Other"}
+      ],
+      "missingValues": [-9, -8, -7]
+    }
+  ],
+  "waves": [
+    {"year": "1999", "wave": 1, "description": "First wave of PSFD data collection"},
+    {"year": "2000", "wave": 2, "description": "Second wave follow-up"},
+    {"year": "2001", "wave": 3, "description": "Third wave follow-up"},
+    {"year": "2002", "wave": 4, "description": "Fourth wave follow-up"},
+    {"year": "2003", "wave": 5, "description": "Fifth wave follow-up"},
+    {"year": "2004", "wave": 6, "description": "Sixth wave follow-up"},
+    {"year": "2005", "wave": 7, "description": "Seventh wave follow-up"},
+    {"year": "2006", "wave": 8, "description": "Eighth wave follow-up"},
+    {"year": "2007", "wave": 9, "description": "Ninth wave follow-up"},
+    {"year": "2008", "wave": 10, "description": "Tenth wave follow-up"},
+    {"year": "2009", "wave": 11, "description": "Eleventh wave follow-up"},
+    {"year": "2010", "wave": 12, "description": "Twelfth wave follow-up"},
+    {"year": "2011", "wave": 13, "description": "Thirteenth wave follow-up"},
+    {"year": "2012", "wave": 14, "description": "Fourteenth wave follow-up"},
+    {"year": "2013", "wave": 15, "description": "Fifteenth wave follow-up"},
+    {"year": "2014", "wave": 16, "description": "Sixteenth wave follow-up"},
+    {"year": "2015", "wave": 17, "description": "Seventeenth wave follow-up"},
+    {"year": "2016", "wave": 18, "description": "Eighteenth wave follow-up"},
+    {"year": "2017", "wave": 19, "description": "Nineteenth wave follow-up"},
+    {"year": "2018", "wave": 20, "description": "Twentieth wave follow-up"},
+    {"year": "2019", "wave": 21, "description": "Twenty-first wave follow-up"},
+    {"year": "2020", "wave": 22, "description": "Twenty-second wave follow-up"}
+  ]
+} 
